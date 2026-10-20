@@ -1,0 +1,33 @@
+{
+  "run_id": "2026-10-09_qwen3.8-27b_bf16_initial",
+  "notes": [
+    "First study, run by hand from the terminal on 2026-10-09 before the notebooks existed.",
+    "Settings below reconstruct exactly what was used (from the vLLM 'non-default args' log lines).",
+    "prof_run.py at the time warmed up with max_tokens=OUT only (no max_tokens=1 warm-up), which is why the",
+    "first prefill_b range contains ~185 ms of host-side time. The current prof_run.py also warms up max_tokens=1.",
+    "No ncu data: the first all-kernel ncu attempt was too slow and was then preempted."
+  ],
+  "gcp": {"project": "h100-qwen27b", "zone": "us-central1-a", "vm": "h100-prof", "machine_type": "a3-highgpu-1g",
+          "provisioning": "SPOT", "image_family": "common-cu129-ubuntu-2204-nvidia-580", "boot_disk_gb": 240},
+  "vllm": {
+    "model": "Qwen/Qwen3.8-27B",
+    "language_model_only": true,
+    "max_model_len": 8192,
+    "max_num_seqs": 256,
+    "gpu_memory_utilization": 0.92,
+    "enable_prefix_caching": false
+  },
+  "vllm_extra_cli": [],
+  "env": {},
+  "workload": {"input_len": 512},
+  "bench": {"enabled": true, "batch_sizes": [1, 8, 32, 64, 128, 256], "output_lens": [1, 128], "warmup_iters": 3, "iters": 5},
+  "nsys": {"enabled": true, "batch_sizes": [1, 32], "modes": ["graphs", "eager"], "out_tokens": 64,
+           "trace": "cuda,nvtx,osrt", "gpu_metrics": false, "extra_args": []},
+  "ncu": {"enabled": false, "use_plan": true, "sweep_batch_sizes": [1], "out_tokens": 8, "gmu": 0.72, "mns": 64,
+          "metrics": ["gpu__time_duration.sum", "dram__bytes_read.sum", "dram__bytes_write.sum",
+                      "dram__throughput.avg.pct_of_peak_sustained_elapsed",
+                      "sm__throughput.avg.pct_of_peak_sustained_elapsed", "launch__grid_size"]},
+  "observed": {"weights_gib": 50.22, "kv_cache_gib": 18.32, "kv_cache_tokens": 223524, "cuda_graph_gib": 0.82,
+               "env": {"vllm": "0.31.0", "torch": "2.13.0+cu130", "driver": "580.178.04", "cuda_toolkit": "12.9",
+                       "nsys": "2025.1.3", "ncu": "2025.2.0", "flashinfer": "0.7.0.post1", "gpu": "NVIDIA H100 80GB HBM3"}}
+}

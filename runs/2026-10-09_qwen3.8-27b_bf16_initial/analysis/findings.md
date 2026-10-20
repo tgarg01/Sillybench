@@ -1,0 +1,8 @@
+- B=1 decode step: 20.68 ms measured vs 15.40 ms predicted floor (1.34x); step-to-step CV 1.4%.
+- GEMMs are 94% of decode kernel time and stream weights at 2.74 TB/s on average (82% of spec).
+- GPU is busy 97.4% of decode; idle 539 us per step -> host work is (almost) fully overlapped.
+- Prefill (512 tokens): 45.0 ms of GPU time, GPU busy 82% (piecewise graphs leave GDN/attention ops eagerly launched).
+- First prefill-only call: 230 ms wall vs 45 ms GPU -> 185 ms of host-side time (open question).
+- Lowest-bandwidth GEMM: gdn.in_proj_ba at 0.21 TB/s (4.7 us for 1.0 MB) -> latency-bound, not bandwidth-bound.
+- Eager vs graphs at B=1: 60.5 vs 20.7 ms per step (2.9x); GPU busy 38% vs 97%.
+- B=32 step is 1.23x the B=1 step for 32x the tokens -> 26.0x throughput; predicted state traffic at B=32 = 9.9 GB/step.

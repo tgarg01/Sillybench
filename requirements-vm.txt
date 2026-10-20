@@ -1,0 +1,6 @@
+# GPU VM environment (installed by scripts/vm_setup.sh into ~/venv with uv).
+# Pinned to the versions the 2026-10-09 results were measured with, so new runs stay comparable.
+vllm==0.31.0
+transformers>=5.8.0
+huggingface_hub
+ipykernel

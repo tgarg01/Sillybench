@@ -1,0 +1,67 @@
+{
+ "stage": "nsys",
+ "state": "done",
+ "updated": 1791941676.4569929,
+ "items": [
+  {
+   "name": "b1_graphs",
+   "optional": false,
+   "state": "done",
+   "seconds": 79.9
+  },
+  {
+   "name": "b1_graphs_stats",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.7
+  },
+  {
+   "name": "b1_eager",
+   "optional": false,
+   "state": "done",
+   "seconds": 58.8
+  },
+  {
+   "name": "b1_eager_stats",
+   "optional": true,
+   "state": "done",
+   "seconds": 1.2
+  },
+  {
+   "name": "b32_graphs",
+   "optional": false,
+   "state": "done",
+   "seconds": 85.0
+  },
+  {
+   "name": "b32_graphs_stats",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.8
+  },
+  {
+   "name": "b32_eager",
+   "optional": false,
+   "state": "done",
+   "seconds": 65.0
+  },
+  {
+   "name": "b32_eager_stats",
+   "optional": true,
+   "state": "done",
+   "seconds": 1.3
+  },
+  {
+   "name": "b1_graphs_gpumetrics",
+   "optional": true,
+   "state": "done",
+   "seconds": 80.6
+  },
+  {
+   "name": "b1_graphs_gpumetrics_stats",
+   "optional": true,
+   "state": "done",
+   "seconds": 1.0
+  }
+ ]
+}

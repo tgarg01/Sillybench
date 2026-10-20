@@ -1,0 +1,79 @@
+{
+ "stage": "bench",
+ "state": "done",
+ "updated": 1791941275.9983566,
+ "items": [
+  {
+   "name": "b1_out1",
+   "optional": false,
+   "state": "done",
+   "seconds": 191.0
+  },
+  {
+   "name": "b1_out128",
+   "optional": false,
+   "state": "done",
+   "seconds": 96.7
+  },
+  {
+   "name": "b8_out1",
+   "optional": false,
+   "state": "done",
+   "seconds": 78.5
+  },
+  {
+   "name": "b8_out128",
+   "optional": false,
+   "state": "done",
+   "seconds": 101.0
+  },
+  {
+   "name": "b32_out1",
+   "optional": false,
+   "state": "done",
+   "seconds": 86.4
+  },
+  {
+   "name": "b32_out128",
+   "optional": false,
+   "state": "done",
+   "seconds": 112.4
+  },
+  {
+   "name": "b64_out1",
+   "optional": false,
+   "state": "done",
+   "seconds": 96.3
+  },
+  {
+   "name": "b64_out128",
+   "optional": false,
+   "state": "done",
+   "seconds": 127.1
+  },
+  {
+   "name": "b128_out1",
+   "optional": false,
+   "state": "done",
+   "seconds": 118.3
+  },
+  {
+   "name": "b128_out128",
+   "optional": false,
+   "state": "done",
+   "seconds": 178.3
+  },
+  {
+   "name": "b256_out1",
+   "optional": false,
+   "state": "done",
+   "seconds": 160.8
+  },
+  {
+   "name": "b256_out128",
+   "optional": false,
+   "state": "done",
+   "seconds": 259.9
+  }
+ ]
+}

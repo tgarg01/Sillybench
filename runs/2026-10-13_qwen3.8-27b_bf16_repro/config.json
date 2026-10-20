@@ -1,0 +1,78 @@
+{
+  "run_id": "2026-10-13_qwen3.8-27b_bf16_repro",
+  "created": "2026-10-13T20:42:43",
+  "gcp": {
+    "project": "h100-qwen27b",
+    "zone": "us-central1-a",
+    "vm": "h100-prof",
+    "machine_type": "a3-highgpu-1g",
+    "provisioning": "SPOT",
+    "image_family": "common-cu129-ubuntu-2204-nvidia-580",
+    "boot_disk_gb": 240
+  },
+  "vllm": {
+    "model": "Qwen/Qwen3.8-27B",
+    "language_model_only": true,
+    "max_model_len": 8192,
+    "max_num_seqs": 256,
+    "gpu_memory_utilization": 0.92,
+    "enable_prefix_caching": false
+  },
+  "vllm_extra_cli": [],
+  "env": {},
+  "workload": {
+    "input_len": 512
+  },
+  "bench": {
+    "enabled": true,
+    "batch_sizes": [
+      1,
+      8,
+      32,
+      64,
+      128,
+      256
+    ],
+    "output_lens": [
+      1,
+      128
+    ],
+    "warmup_iters": 3,
+    "iters": 5
+  },
+  "nsys": {
+    "enabled": true,
+    "batch_sizes": [
+      1,
+      32
+    ],
+    "modes": [
+      "graphs",
+      "eager"
+    ],
+    "out_tokens": 64,
+    "trace": "cuda,nvtx,osrt",
+    "gpu_metrics": true,
+    "gpu_metrics_hz": 10000,
+    "extra_args": []
+  },
+  "ncu": {
+    "enabled": true,
+    "use_plan": true,
+    "sweep_batch_sizes": [
+      1
+    ],
+    "out_tokens": 8,
+    "gmu": 0.72,
+    "mns": 64,
+    "time_limit_min": 150,
+    "metrics": [
+      "gpu__time_duration.sum",
+      "dram__bytes_read.sum",
+      "dram__bytes_write.sum",
+      "dram__throughput.avg.pct_of_peak_sustained_elapsed",
+      "sm__throughput.avg.pct_of_peak_sustained_elapsed",
+      "launch__grid_size"
+    ]
+  }
+}

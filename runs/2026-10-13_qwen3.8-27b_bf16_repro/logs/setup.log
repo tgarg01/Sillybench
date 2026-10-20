@@ -1,0 +1,26 @@
+[2026-10-14T16:27:38Z] start: bash scripts/vm_setup.sh Qwen/Qwen3.8-27B
+
+=== GPU and driver ===
+NVIDIA H100 80GB HBM3, 580.178.04, 81559 MiB
+
+=== System packages (C++ compiler for FlashInfer JIT, tmux) ===
+g++ and tmux already present
+
+=== CUDA tools on PATH (nsys, ncu) ===
+nsys: NVIDIA Nsight Systems version 2025.1.3.140-251335620677v0
+ncu: Version 2025.2.0.0 (build 35613519) (public-release)
+
+=== uv + Python venv ===
+
+=== Python packages (requirements-vm.txt, pinned) ===
+requirements unchanged, skipping install
+vllm 0.31.0 | torch 2.13.0+cu130 | NVIDIA H100 80GB HBM3
+
+=== Model weights: Qwen/Qwen3.8-27B ===
+Fetching 32 files:   0%|          | 0/32 [00:00<?, ?it/s]Fetching 32 files: 100%|██████████| 32/32 [00:00<00:00, 3306.59it/s]
+[32m✓ Downloaded[0m
+  path: /home/tushargarg/.cache/huggingface/hub/models--Qwen--Qwen3.8-27B/snapshots/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0
+52G	/home/tushargarg/.cache/huggingface/hub/models--Qwen--Qwen3.8-27B/snapshots/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0
+
+=== Setup complete ===
+[2026-10-14T16:27:42Z] exit code 0

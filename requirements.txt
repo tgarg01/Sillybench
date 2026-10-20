@@ -1,0 +1,11 @@
+# Laptop environment for the notebooks (created by setup_laptop.sh). vLLM is NOT installed here:
+# it only runs on the GPU VM (see requirements-vm.txt).
+jupyter
+ipykernel
+nbconvert
+nbclient
+pandas
+numpy
+matplotlib
+huggingface_hub   # post notebooks: download the model's config.json / tokenizer.json (not the weights)
+tokenizers        # post1.ipynb: tokenize the prompt

@@ -1,0 +1,67 @@
+[2026-10-14T16:30:08Z] start: python scripts/run_stage.py ncu --run-dir runs/2026-10-13_qwen3.8-27b_bf16_repro
+[run ] plan
+       bash /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu_plan/ncu_commands.sh /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro /home/tushargarg/venv/bin/python
+       log: logs/ncu_plan.log
+[run ] b1_00_mlp_gate_up_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b1_00_mlp_gate_up.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b1_00_mlp_gate_up.csv
+       log: logs/ncu_b1_00_mlp_gate_up_csv.log
+[run ] b1_01_mlp_down_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b1_01_mlp_down.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b1_01_mlp_down.csv
+       log: logs/ncu_b1_01_mlp_down_csv.log
+[run ] b1_02_gdn_in_proj_qkvz_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b1_02_gdn_in_proj_qkvz.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b1_02_gdn_in_proj_qkvz.csv
+       log: logs/ncu_b1_02_gdn_in_proj_qkvz_csv.log
+[run ] b1_03_attn_o_proj_gdn_out_proj_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b1_03_attn_o_proj_gdn_out_proj.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b1_03_attn_o_proj_gdn_out_proj.csv
+       log: logs/ncu_b1_03_attn_o_proj_gdn_out_proj_csv.log
+[run ] b1_04_gdn_in_proj_ba_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b1_04_gdn_in_proj_ba.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b1_04_gdn_in_proj_ba.csv
+       log: logs/ncu_b1_04_gdn_in_proj_ba_csv.log
+[run ] b1_05_GDN_recurrent_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b1_05_GDN_recurrent.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b1_05_GDN_recurrent.csv
+       log: logs/ncu_b1_05_GDN_recurrent_csv.log
+[run ] b1_06_Norm_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b1_06_Norm.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b1_06_Norm.csv
+       log: logs/ncu_b1_06_Norm_csv.log
+[run ] b1_07_Full_attention_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b1_07_Full_attention.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b1_07_Full_attention.csv
+       log: logs/ncu_b1_07_Full_attention_csv.log
+[run ] b1_08_Norm_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b1_08_Norm.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b1_08_Norm.csv
+       log: logs/ncu_b1_08_Norm_csv.log
+[run ] b32_09_mlp_gate_up_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_09_mlp_gate_up.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_09_mlp_gate_up.csv
+       log: logs/ncu_b32_09_mlp_gate_up_csv.log
+[run ] b32_10_mlp_down_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_10_mlp_down.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_10_mlp_down.csv
+       log: logs/ncu_b32_10_mlp_down_csv.log
+[run ] b32_11_attn_o_proj_gdn_out_proj_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_11_attn_o_proj_gdn_out_proj.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_11_attn_o_proj_gdn_out_proj.csv
+       log: logs/ncu_b32_11_attn_o_proj_gdn_out_proj_csv.log
+[run ] b32_12_gdn_in_proj_qkvz_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_12_gdn_in_proj_qkvz.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_12_gdn_in_proj_qkvz.csv
+       log: logs/ncu_b32_12_gdn_in_proj_qkvz_csv.log
+[run ] b32_13_gdn_in_proj_ba_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_13_gdn_in_proj_ba.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_13_gdn_in_proj_ba.csv
+       log: logs/ncu_b32_13_gdn_in_proj_ba_csv.log
+[run ] b32_14_GDN_recurrent_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_14_GDN_recurrent.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_14_GDN_recurrent.csv
+       log: logs/ncu_b32_14_GDN_recurrent_csv.log
+[run ] b32_15_Full_attention_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_15_Full_attention.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_15_Full_attention.csv
+       log: logs/ncu_b32_15_Full_attention_csv.log
+[run ] b32_16_Copy_elementwise_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_16_Copy_elementwise.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_16_Copy_elementwise.csv
+       log: logs/ncu_b32_16_Copy_elementwise_csv.log
+[run ] b32_17_GDN_conv_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_17_GDN_conv.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_17_GDN_conv.csv
+       log: logs/ncu_b32_17_GDN_conv_csv.log
+[run ] sweep_b1_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/sweep_b1.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/sweep_b1.csv
+       log: logs/ncu_sweep_b1_csv.log
+[run ] sweep_b32_csv
+       ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/sweep_b32.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/sweep_b32.csv
+       log: logs/ncu_sweep_b32_csv.log
+
+Stage ncu: 21 items, 0 failed
+[2026-10-14T17:39:19Z] exit code 0

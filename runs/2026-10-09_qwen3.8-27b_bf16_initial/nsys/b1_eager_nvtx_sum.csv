@@ -1,0 +1,3 @@
+Time (%),Total Time (ns),Instances,Avg (ns),Med (ns),Min (ns),Max (ns),StdDev (ns),Style,Range
+97.6,3935135920,1,3935135920.0,3935135920.0,3935135920,3935135920,0.0,PushPop,:prefill_decode64_b1
+2.4,97553875,1,97553875.0,97553875.0,97553875,97553875,0.0,PushPop,:prefill_b1

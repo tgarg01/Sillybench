@@ -1,0 +1,2 @@
+$ ncu --import /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_16_Copy_elementwise.ncu-rep --csv --page raw > /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/ncu/b32_16_Copy_elementwise.csv
+

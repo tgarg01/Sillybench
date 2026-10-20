@@ -1,0 +1,34 @@
+[2026-10-14T01:28:21Z] start: python scripts/run_stage.py nsys --run-dir runs/2026-10-13_qwen3.8-27b_bf16_repro
+[run ] b1_graphs
+       nsys profile --force-overwrite=true --trace=cuda,nvtx,osrt --cuda-graph-trace=node --trace-fork-before-exec=true --capture-range=cudaProfilerApi --capture-range-end=stop -o /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/nsys/b1_graphs /home/tushargarg/venv/bin/python /home/tushargarg/h100-vllm-profiling/scripts/prof_run.py --config /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/config.json --batch 1 --mode graphs --out 64
+       log: logs/nsys_b1_graphs.log
+[run ] b1_graphs_stats
+       nsys stats --report cuda_gpu_kern_sum,nvtx_sum --format csv --force-export=true --output /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/nsys/b1_graphs /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/nsys/b1_graphs.nsys-rep
+       log: logs/nsys_b1_graphs_stats.log
+[run ] b1_eager
+       nsys profile --force-overwrite=true --trace=cuda,nvtx,osrt --cuda-graph-trace=node --trace-fork-before-exec=true --capture-range=cudaProfilerApi --capture-range-end=stop -o /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/nsys/b1_eager /home/tushargarg/venv/bin/python /home/tushargarg/h100-vllm-profiling/scripts/prof_run.py --config /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/config.json --batch 1 --mode eager --out 64
+       log: logs/nsys_b1_eager.log
+[run ] b1_eager_stats
+       nsys stats --report cuda_gpu_kern_sum,nvtx_sum --format csv --force-export=true --output /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/nsys/b1_eager /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/nsys/b1_eager.nsys-rep
+       log: logs/nsys_b1_eager_stats.log
+[run ] b32_graphs
+       nsys profile --force-overwrite=true --trace=cuda,nvtx,osrt --cuda-graph-trace=node --trace-fork-before-exec=true --capture-range=cudaProfilerApi --capture-range-end=stop -o /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/nsys/b32_graphs /home/tushargarg/venv/bin/python /home/tushargarg/h100-vllm-profiling/scripts/prof_run.py --config /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/config.json --batch 32 --mode graphs --out 64
+       log: logs/nsys_b32_graphs.log
+[run ] b32_graphs_stats
+       nsys stats --report cuda_gpu_kern_sum,nvtx_sum --format csv --force-export=true --output /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/nsys/b32_graphs /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/nsys/b32_graphs.nsys-rep
+       log: logs/nsys_b32_graphs_stats.log
+[run ] b32_eager
+       nsys profile --force-overwrite=true --trace=cuda,nvtx,osrt --cuda-graph-trace=node --trace-fork-before-exec=true --capture-range=cudaProfilerApi --capture-range-end=stop -o /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/nsys/b32_eager /home/tushargarg/venv/bin/python /home/tushargarg/h100-vllm-profiling/scripts/prof_run.py --config /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/config.json --batch 32 --mode eager --out 64
+       log: logs/nsys_b32_eager.log
+[run ] b32_eager_stats
+       nsys stats --report cuda_gpu_kern_sum,nvtx_sum --format csv --force-export=true --output /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/nsys/b32_eager /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/nsys/b32_eager.nsys-rep
+       log: logs/nsys_b32_eager_stats.log
+[run ] b1_graphs_gpumetrics
+       sudo -E env PATH=/home/tushargarg/venv/bin:/home/tushargarg/.local/bin:/usr/local/cuda/bin:/home/tushargarg/.local/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin HOME=/home/tushargarg HF_HOME=/home/tushargarg/.cache/huggingface VLLM_ENABLE_V1_MULTIPROCESSING=0 VLLM_WORKER_MULTIPROC_METHOD=spawn nsys profile --force-overwrite=true --trace=cuda,nvtx,osrt --cuda-graph-trace=node --trace-fork-before-exec=true --capture-range=cudaProfilerApi --capture-range-end=stop --gpu-metrics-devices=0 --gpu-metrics-frequency=10000 -o /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/nsys/b1_graphs_gpumetrics /home/tushargarg/venv/bin/python /home/tushargarg/h100-vllm-profiling/scripts/prof_run.py --config /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/config.json --batch 1 --mode graphs --out 64
+       log: logs/nsys_b1_graphs_gpumetrics.log
+[run ] b1_graphs_gpumetrics_stats
+       nsys stats --report cuda_gpu_kern_sum,nvtx_sum --format csv --force-export=true --output /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/nsys/b1_graphs_gpumetrics /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/nsys/b1_graphs_gpumetrics.nsys-rep
+       log: logs/nsys_b1_graphs_gpumetrics_stats.log
+
+Stage nsys: 10 items, 0 failed
+[2026-10-14T01:34:36Z] exit code 0

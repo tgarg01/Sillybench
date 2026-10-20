@@ -1,0 +1,40 @@
+[2026-10-14T01:01:09Z] start: python scripts/run_stage.py bench --run-dir runs/2026-10-13_qwen3.8-27b_bf16_repro
+[run ] b1_out1
+       vllm bench latency --model Qwen/Qwen3.8-27B --language-model-only --max-model-len 8192 --max-num-seqs 256 --gpu-memory-utilization 0.92 --no-enable-prefix-caching --batch-size 1 --input-len 512 --output-len 1 --num-iters-warmup 3 --num-iters 5 --output-json /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/bench/lat_b1_in512_out1.json
+       log: logs/bench_b1_out1.log
+[run ] b1_out128
+       vllm bench latency --model Qwen/Qwen3.8-27B --language-model-only --max-model-len 8192 --max-num-seqs 256 --gpu-memory-utilization 0.92 --no-enable-prefix-caching --batch-size 1 --input-len 512 --output-len 128 --num-iters-warmup 3 --num-iters 5 --output-json /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/bench/lat_b1_in512_out128.json
+       log: logs/bench_b1_out128.log
+[run ] b8_out1
+       vllm bench latency --model Qwen/Qwen3.8-27B --language-model-only --max-model-len 8192 --max-num-seqs 256 --gpu-memory-utilization 0.92 --no-enable-prefix-caching --batch-size 8 --input-len 512 --output-len 1 --num-iters-warmup 3 --num-iters 5 --output-json /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/bench/lat_b8_in512_out1.json
+       log: logs/bench_b8_out1.log
+[run ] b8_out128
+       vllm bench latency --model Qwen/Qwen3.8-27B --language-model-only --max-model-len 8192 --max-num-seqs 256 --gpu-memory-utilization 0.92 --no-enable-prefix-caching --batch-size 8 --input-len 512 --output-len 128 --num-iters-warmup 3 --num-iters 5 --output-json /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/bench/lat_b8_in512_out128.json
+       log: logs/bench_b8_out128.log
+[run ] b32_out1
+       vllm bench latency --model Qwen/Qwen3.8-27B --language-model-only --max-model-len 8192 --max-num-seqs 256 --gpu-memory-utilization 0.92 --no-enable-prefix-caching --batch-size 32 --input-len 512 --output-len 1 --num-iters-warmup 3 --num-iters 5 --output-json /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/bench/lat_b32_in512_out1.json
+       log: logs/bench_b32_out1.log
+[run ] b32_out128
+       vllm bench latency --model Qwen/Qwen3.8-27B --language-model-only --max-model-len 8192 --max-num-seqs 256 --gpu-memory-utilization 0.92 --no-enable-prefix-caching --batch-size 32 --input-len 512 --output-len 128 --num-iters-warmup 3 --num-iters 5 --output-json /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/bench/lat_b32_in512_out128.json
+       log: logs/bench_b32_out128.log
+[run ] b64_out1
+       vllm bench latency --model Qwen/Qwen3.8-27B --language-model-only --max-model-len 8192 --max-num-seqs 256 --gpu-memory-utilization 0.92 --no-enable-prefix-caching --batch-size 64 --input-len 512 --output-len 1 --num-iters-warmup 3 --num-iters 5 --output-json /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/bench/lat_b64_in512_out1.json
+       log: logs/bench_b64_out1.log
+[run ] b64_out128
+       vllm bench latency --model Qwen/Qwen3.8-27B --language-model-only --max-model-len 8192 --max-num-seqs 256 --gpu-memory-utilization 0.92 --no-enable-prefix-caching --batch-size 64 --input-len 512 --output-len 128 --num-iters-warmup 3 --num-iters 5 --output-json /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/bench/lat_b64_in512_out128.json
+       log: logs/bench_b64_out128.log
+[run ] b128_out1
+       vllm bench latency --model Qwen/Qwen3.8-27B --language-model-only --max-model-len 8192 --max-num-seqs 256 --gpu-memory-utilization 0.92 --no-enable-prefix-caching --batch-size 128 --input-len 512 --output-len 1 --num-iters-warmup 3 --num-iters 5 --output-json /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/bench/lat_b128_in512_out1.json
+       log: logs/bench_b128_out1.log
+[run ] b128_out128
+       vllm bench latency --model Qwen/Qwen3.8-27B --language-model-only --max-model-len 8192 --max-num-seqs 256 --gpu-memory-utilization 0.92 --no-enable-prefix-caching --batch-size 128 --input-len 512 --output-len 128 --num-iters-warmup 3 --num-iters 5 --output-json /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/bench/lat_b128_in512_out128.json
+       log: logs/bench_b128_out128.log
+[run ] b256_out1
+       vllm bench latency --model Qwen/Qwen3.8-27B --language-model-only --max-model-len 8192 --max-num-seqs 256 --gpu-memory-utilization 0.92 --no-enable-prefix-caching --batch-size 256 --input-len 512 --output-len 1 --num-iters-warmup 3 --num-iters 5 --output-json /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/bench/lat_b256_in512_out1.json
+       log: logs/bench_b256_out1.log
+[run ] b256_out128
+       vllm bench latency --model Qwen/Qwen3.8-27B --language-model-only --max-model-len 8192 --max-num-seqs 256 --gpu-memory-utilization 0.92 --no-enable-prefix-caching --batch-size 256 --input-len 512 --output-len 128 --num-iters-warmup 3 --num-iters 5 --output-json /home/tushargarg/h100-vllm-profiling/runs/2026-10-13_qwen3.8-27b_bf16_repro/bench/lat_b256_in512_out128.json
+       log: logs/bench_b256_out128.log
+
+Stage bench: 12 items, 0 failed
+[2026-10-14T01:27:56Z] exit code 0

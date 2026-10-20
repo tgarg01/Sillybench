@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+._*
+.upload.tgz
+runs/.*.tgz
+runs/9999-*/
+# ~1 GB ncu sweep reports exceed GitHub's 100 MB limit: published as release assets (CSVs are tracked)
+runs/*/ncu/sweep_*.ncu-rep
+.claude/
+# LinkedIn post material: kept on this laptop only, never pushed
+/posts/
+/results/
+.venv-posts/

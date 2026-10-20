@@ -1,0 +1,19 @@
+trace,B,kind,kernel,role,per_step,avg_us,ms_per_step,lost_us_per_step,pct_peak_bw,launch_skip,tag
+b1_graphs,1,GEMM,nvjet_sm90_tst_384x8_64x4_4x1_v_bz_TNT,mlp.gate_up,64.0,127.32802703373017,8.14899373015873,1336.4189337408197,83.60019680963984,128,b1_00_mlp_gate_up
+b1_graphs,1,GEMM,nvjet_sm90_tst_128x8_64x12_4x1_v_bz_splitK_TNT,mlp.down,64.0,64.64495833333334,4.1372773333333335,730.8921201990051,82.3339829237375,128,b1_01_mlp_down
+b1_graphs,1,GEMM,nvjet_sm90_tst_128x8_64x12_2x1_v_bz_TNT,gdn.in_proj_qkvz,48.0,59.44231150793651,2.8532309523809523,448.7151123809525,84.27343878326741,96,b1_02_gdn_in_proj_qkvz
+b1_graphs,1,GEMM,nvjet_sm90_tst_64x8_64x16_4x1_v_bz_TNT,attn.o_proj + gdn.out_proj,64.0,25.422679811507937,1.627051507936508,424.67131927979153,73.89933156951025,128,b1_03_attn_o_proj_gdn_out_proj
+b1_graphs,1,GEMM,nvjet_sm90_tst_64x8_64x16_2x1_v_bz_splitK_TNT,gdn.in_proj_ba,48.0,4.651228835978836,0.2232589841269841,209.02416144041695,6.375923791927117,96,b1_04_gdn_in_proj_ba
+b1_graphs,1,non-GEMM,fused_recurrent_gated_delta_rule_packed_decode_kernel,GDN recurrent,48.0,5.660728174603175,0.2717149523809524,,,96,b1_05_GDN_recurrent
+b1_graphs,1,non-GEMM,triton_red_fused__to_copy_add_fused_add_rms_norm_2,Norm,48.0,3.019931216931217,0.14495669841269843,,,192,b1_06_Norm
+b1_graphs,1,non-GEMM,cutlass::device_kernel<flash::enable_sm90_or_later<flash::FlashAttnFwdSm90<flash::CollectiveMainloopFwdSm90<(i,Full attention,16.0,8.800342261904762,0.14080547619047618,,,64,b1_07_Full_attention
+b1_graphs,1,non-GEMM,triton_red_fused__to_copy_add_fused_add_rms_norm_0,Norm,48.0,2.871121693121693,0.13781384126984125,,,192,b1_08_Norm
+b32_graphs,32,GEMM,nvjet_sm90_tst_384x32_64x4_4x1_v_bz_TNT,mlp.gate_up,64.0,130.32716269841268,8.340938412698412,1481.0603183700532,82.24348094795597,128,b32_09_mlp_gate_up
+b32_graphs,32,GEMM,nvjet_sm90_tst_128x32_64x10_4x1_v_bz_splitK_TNT,mlp.down,64.0,67.68596453373016,4.33190173015873,898.8326053826104,79.25085421202122,128,b32_10_mlp_down
+b32_graphs,32,GEMM,nvjet_sm90_tst_64x32_64x16_4x1_v_bz_TNT,attn.o_proj + gdn.out_proj,64.0,29.884295634920637,1.9125949206349206,696.8727761573089,63.564016162608596,128,b32_11_attn_o_proj_gdn_out_proj
+b32_graphs,32,GEMM,nvjet_sm90_tst_128x32_64x10_2x1_v_bz_TNT,gdn.in_proj_qkvz,48.0,61.62282374338624,2.9578955396825397,534.2764447571665,81.93727812259023,96,b32_12_gdn_in_proj_qkvz
+b32_graphs,32,GEMM,nvjet_sm90_tst_32x64_64x16_4x1_v_bz_splitK_TNN,gdn.in_proj_ba,48.0,4.980149801587301,0.23904719047619047,220.1786913717129,7.893210987709538,96,b32_13_gdn_in_proj_ba
+b32_graphs,32,non-GEMM,fused_recurrent_gated_delta_rule_packed_decode_kernel,GDN recurrent,48.0,66.60930853174604,3.1972468095238096,,,96,b32_14_GDN_recurrent
+b32_graphs,32,non-GEMM,cutlass::device_kernel<flash::enable_sm90_or_later<flash::FlashAttnFwdSm90<flash::CollectiveMainloopFwdSm90<(i,Full attention,16.0,33.15495535714285,0.5304792857142857,,,64,b32_15_Full_attention
+b32_graphs,32,non-GEMM,elementwise_kernel,Copy / elementwise,144.0,2.397372795414462,0.34522168253968255,,,672,b32_16_Copy_elementwise
+b32_graphs,32,non-GEMM,_causal_conv1d_update_kernel,GDN conv,48.0,3.431258267195767,0.16470039682539683,,,96,b32_17_GDN_conv

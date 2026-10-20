@@ -1,0 +1,133 @@
+{
+ "stage": "ncu",
+ "state": "done",
+ "updated": 1791999559.7747908,
+ "items": [
+  {
+   "name": "plan",
+   "optional": false,
+   "state": "done",
+   "seconds": 4060.6
+  },
+  {
+   "name": "b1_00_mlp_gate_up_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.5
+  },
+  {
+   "name": "b1_01_mlp_down_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.5
+  },
+  {
+   "name": "b1_02_gdn_in_proj_qkvz_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.5
+  },
+  {
+   "name": "b1_03_attn_o_proj_gdn_out_proj_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.5
+  },
+  {
+   "name": "b1_04_gdn_in_proj_ba_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.5
+  },
+  {
+   "name": "b1_05_GDN_recurrent_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.5
+  },
+  {
+   "name": "b1_06_Norm_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.5
+  },
+  {
+   "name": "b1_07_Full_attention_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.5
+  },
+  {
+   "name": "b1_08_Norm_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.5
+  },
+  {
+   "name": "b32_09_mlp_gate_up_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.5
+  },
+  {
+   "name": "b32_10_mlp_down_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.5
+  },
+  {
+   "name": "b32_11_attn_o_proj_gdn_out_proj_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.5
+  },
+  {
+   "name": "b32_12_gdn_in_proj_qkvz_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.5
+  },
+  {
+   "name": "b32_13_gdn_in_proj_ba_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.5
+  },
+  {
+   "name": "b32_14_GDN_recurrent_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.5
+  },
+  {
+   "name": "b32_15_Full_attention_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.5
+  },
+  {
+   "name": "b32_16_Copy_elementwise_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.5
+  },
+  {
+   "name": "b32_17_GDN_conv_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 0.5
+  },
+  {
+   "name": "sweep_b1_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 38.8
+  },
+  {
+   "name": "sweep_b32_csv",
+   "optional": true,
+   "state": "done",
+   "seconds": 42.7
+  }
+ ]
+}
